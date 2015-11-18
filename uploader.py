@@ -50,13 +50,13 @@ def upload_file():
             file_ext = 'txt'
 
          # Creates a random ID for the saved file.
-         rand_id  = id_generator();
+         rand_id  = id_generator()
          filename = secure_filename(rand_id + '.' + file_ext)
          filepath = os.path.isfile(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
          # Loops if the filename exists, until it generates a unique name.
          while filepath == True:
-            rand_id  = id_generator();
+            rand_id  = id_generator()
             filename = secure_filename(rand_id + '.' + file_ext)
             filepath = os.path.isfile(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
