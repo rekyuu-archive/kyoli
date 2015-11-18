@@ -75,11 +75,13 @@ def upload_file():
 # Displays a text file at /u/file.
 @app.route('/<text>')
 def uploaded_file(text):
+
    textfile = open(app.config['UPLOAD_FOLDER'] + '/' + text + '.txt').read()
    return render_template('text.html', text = textfile)
 
 
 # Runs the script.
 if __name__ == '__main__':
+
    app.debug = False
    app.run()
