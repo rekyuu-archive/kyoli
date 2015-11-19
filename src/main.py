@@ -1,6 +1,6 @@
 import config
 import os
-from lib import uploads
+from helpers import uploads
 from flask import Flask, request, redirect, render_template, make_response, \
 	send_file, Markup
 
