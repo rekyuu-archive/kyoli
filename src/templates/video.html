@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	<div id="video" class="grid">
+		<video autoplay autobuffer autoloop loop controls>
+			<source src="/api/video/{{ video }}">
+			<param name="autoplay" value="true">
+			<param name="autoStart" value="1">
+		</video>
+	</div>
+{% endblock %}

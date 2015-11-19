@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	<div id="index" class="grid">
+		<input id="manual" type="file" multiple="">
+
+		<div id="dropin">
+			<div class="vertical">
+				<!-- Initial text -->
+				<span id="pre">
+					<h1>drop files here</h1>
+					<p>or click to select files</p>
+					<p>or paste text</p>
+				</span>
+
+				<!-- Uploading text -->
+				<span id="post">
+					<h1>uploading...</h1>
+				</span>
+
+				<!-- Unknown error -->
+				<span id="err">
+					<h1>i am error</h1>
+					<p>feel free to try again</p>
+				</span>
+
+				<!-- Nil error -->
+				<span id="nil">
+					<h1>unable to upload</h1>
+					<p>none of your files are allowed</p>
+					<p>feel free to try again</p>
+				</span>
+			</div>
+		</div>
+
+		<div id="urlist">
+			<h1>finished uploading</h1>
+		</div>
+	</div>
+{% endblock %}
