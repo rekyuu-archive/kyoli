@@ -1,12 +1,9 @@
+DEBUG    		= True
 UPLOAD_TO		= './tmp'
 DATABASE 		= './living_in_the_.db'
-DEBUG    		= False
-SECRET_KEY		= 'secretly, i love you'
-USERNAME		= 'admin'
-PASSWORD		= 'password'
 MAX_SIZE_MB		= 50
 ALLOWED_AUDIO 	= ['flac', 'mp3', 'ogg']
-ALLOWED_IMAGE 	= ['gif', 'jpg', 'jpeg', 'png']
+ALLOWED_IMAGE 	= ['jpg', 'jpeg', 'png']
 ALLOWED_FILE	= ['pdf']
 ALLOWED_TEXT	= ['css', 'conf', 'htm', 'html', 'js', 'py', 'sh', 'txt']
 ALLOWED_VIDEO	= ['mp4', 'webm']

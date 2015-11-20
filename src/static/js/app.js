@@ -62,17 +62,28 @@ function upload (files) {
 			var response = JSON.parse(req.response);
 			if (response.status == 'ok') {
 				if (response.urls.length == 1 ) {
-					window.location = response.urls[0];
+					if (response.urls[0] == 'rejected') {
+						niltext.style.display = 'block';
+						postext.style.display = 'none';
+					} else {
+						window.location = response.urls[0];
+					}
 				} else {
 					dropin.style.display = 'none';
 					urlist.style.display = 'block';
 
 					for (var i = 0; i < response.urls.length; i++) {
-						var link = document.createElement('a');
-						link.setAttribute('href', response.urls[i]);
-						link.setAttribute('target', '_blank');
-						link.innerHTML = '<p>' + response.urls[i] + '</p>';
-						urlist.appendChild(link);
+						if (response.urls[i].substring(0, 8) == 'rejected') {
+							var text = document.createElement('p');
+							text.innerHTML = response.urls[i];
+							urlist.appendChild(text);
+						} else {
+							var link = document.createElement('a');
+							link.setAttribute('href', response.urls[i]);
+							link.setAttribute('target', '_blank');
+							link.innerHTML = '<p>' + response.urls[i] + '</p>';
+							urlist.appendChild(link);
+						}
 					}
 				}
 			} else if (response.status == 'none' ) {
