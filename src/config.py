@@ -1,7 +1,7 @@
 DEBUG    		= False
 PORT			= 5000
 UPLOAD_TO		= './tmp'
-DATABASE 		= './living_in_the_.db'
+DATABASE 		= 'living_in_the_.db'
 MAX_SIZE_MB		= 50
 ALLOWED_AUDIO 	= ['flac', 'mp3', 'ogg']
 ALLOWED_IMAGE 	= ['jpg', 'jpeg', 'png']

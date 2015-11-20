@@ -85,7 +85,7 @@ def check_if_exists(f, ext, filetype):
 
 	md5 = get_md5_hash(f)
 
-	con = sql.connect(config.UPLOAD_TO + config.DATABASE)
+	con = sql.connect(config.UPLOAD_TO + '/' + config.DATABASE)
 	with con:
 		con.row_factory = sql.Row
 		db = con.cursor()
