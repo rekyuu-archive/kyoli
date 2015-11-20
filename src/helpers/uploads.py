@@ -69,10 +69,10 @@ def save_and_get_url(f, ext, filetype):
 		url = '/v/'
 
 	check = check_if_exists(f, ext, filetype)
-	exists = check[0]
+	save = check[0]
 	filename = check[1]
 
-	if exists:
+	if save:
 		filepath = os.path.join(config.UPLOAD_TO + folder, filename)
 		f.save(filepath)
 
