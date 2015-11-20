@@ -1,8 +1,7 @@
 import config
 import os
 from helpers import uploads
-from flask import Flask, request, redirect, render_template, make_response, \
-	send_file, Markup
+from flask import Flask, request, render_template, make_response, send_file
 
 
 if not os.path.exists(config.UPLOAD_TO):
